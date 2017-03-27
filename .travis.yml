@@ -15,6 +15,7 @@ script:
 - gitbook pdf ./ ./sapientiae.pdf
 - gitbook epub ./ ./sapientiae.epub
 - gitbook mobi ./ ./sapientiae.mobi
+- sudo chown travis .config
 deploy:
   provider: releases
   api_key:
