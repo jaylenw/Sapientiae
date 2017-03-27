@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+- 4.2.6
+before_script:
+- sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.py |
+  sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read());
+  main()"
+- npm install gitbook-cli -g
+- npm install svgexport -g
+- gitbook install
+- npm install
+script:
+- npm run lint-md
+- gitbook build
+- gitbook pdf ./ ./sapientiae.pdf
+- gitbook epub ./ ./sapientiae.epub
+- gitbook mobi ./ ./sapientiae.mobi
+deploy:
+  provider: releases
+  api_key:
+    secure: KIVVS1TFsOWRIR0SdedeGq9YsfxTXVMWJQy2yz0jrsScsd0s6So9nIEQUwIpDvnjpfvt2EwTaEen2/BB6ZGi4a/s5LImSzZft6CU3ax82VSAoXDgAK8rHBKzMjAnHZBwUlxFM2iG642ZRvfDOxlW8LvlhEL0m/39UGfY1Tv2RguuDAsIdJJSxf0uSSUc8K9PxtZdLNi9PVneMt220uI4swggI5ew9AD5HsBhuxWAKOwBSzIwhRqwmHmMb/kOSo3l2mAdkDikZ/4IN5OPgRE7WrwThxdumiVbaxXxPCx2otU3MyfQBXKE4Qss8/rVlXRoQgiEI98FFSpDyq5nqQBE9e/L+BmlfDsiDNjr1qCwXz7PWIoAcLeKPf6nKlR4W6UbuqIeW5X0qmDDsgEoLcph6CI3agx3VMawtrPjSjncIAL5w+D9TPjBXxeRshkfcO/zbDG65Ag6fFX4uJ634HxjpmWp2Md0rUy+F+/I8bhS1aLXG0kUGDg0Dv1+zx0DBXh0T7iAoMjY+ltw2CeChPRHtiKxWG2+unkC5ToGqgtMD42dgBMFBGyc061cQBpKiq91Mo18RQq/vtLyaRHp0cIXhwMHWZVBwgdLyNXhAFbZcHPoRo1x2ZOH+09OsaT4xN6tO4aK+G9uFQQNkZH4145FFHRPO6vhU111Ux8TzWHtj/s=
+  file: sapientiae.pdf
+  on:
+    repo: jaylenw/Sapientiae
