@@ -18,14 +18,15 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: $SECURE-TOKEN
+    secure: ppQLzavb3In25lDNqtEyoruWBjVmw2l9G9359E6vAa9DcgjAAI4DZ0n9PmDUDey1uBP2yz9N83xOB/g2zd5de6m/TfJ7jUyu9Ll0sBfeckvLSp33EA69a+f3fnBmuynDJZxigz5PisX8+i0BeicO6Af0ncq/JT1Qlf5dSq68hb3zrY6Q0PjeyK5l2gqC8+xRoRPB4ZI9630Gr7Jge1EX0mJBTgR0N/Dce5yMNUWsU5PVlHCfmpbMP4tETpg3bH9ZQqsx5h6+7d4z5bCfp0QyjoxD4pw07aKOzS/nlx0IhupO9HlDI9y7nl/8nIU3EE7eXwDiQ58wYbHsKND/j/IYWPIVjWXR2SFq8cMsm6XuF3LtRjFRiUe+7B47m0W497rFWb164NoGXxcwLNueyGmz13adI0SBrD30CnqC3qSuLNd0acnhm8jXaYyK9L7V6ihu3hjLsL9llyRoC5cu0SUMSw4ztqSV/4q3UBKzmu7EEpdWwDAqhT4Lqs+UvuHKdxd6BRp9+cLAMR/YoNqIfLryhlm5InW1WA2VKtjH90/FHrFUgccAoMVok22upp/Zw0rzy4tRC3gSjo9AgdVbwq6rxTJCK2h+2/5D1vkBGNTLxKUKzusgu2+Cvxl3Yc0bqh5Yoi2FvWF5kY5DodnIBgJ8ZKOGsj/W6MJpQ/ldmHJtOHI=
   file: sapientiae.pdf
   skip_cleanup: true
   on:
     tags: true
   provider: pages
   local_dir: _book
-  github_token: $GITHUB_TOKEN
+  github_token:
+    secure: lh+aonrzVdn9IuqZxhOq+DyGiKmO0PWAGv2/rWADKDnflrG4JKnmMVVKwbduFwInf0XdKKbxnFFio+o5bRgNbX3Nao+AM06N2gmOS1cv37nsKm4fv0gTTnyd+UoNEu+NmKifQ7YoR8WleGUOs/YAH2dU5X/w7w4zF/BnHxFgLOfJ1lvf6JPwmbhiBrZrxi4uy1+eFq050kQ44lvfR+hP0klv+hopcagGMxBOktVcGPfigCocnp/uoS0hOw4Ugu3nUAewJNdU9clA6oXnGN15RAcAhG+ftHjMon4cp5fnDveoP9CKc3rGP2UKNAoWcJHeCOwBGP98qissBZwY82NAXh6iSzNCPj5XFuQghYq1a+OooDc3mQjI7iTKy8x2ApZJXGXrp0FFo0sQGbfjELUAH135NaysAvKujd9T0b6ZQaxpXtaxVRTlmo6VuHVf4CoC6BTCz25pxlAiJMKt+BJNTN+L5v2C1epP9pPitRUpqT38lKkyE9QcsUUKAqnZ8NX5EQANefQNiZ2W0dz5LwhTyVlVaQPAbvZa4j8e4L7f4NX75dkK1NwPjB/uSR53kGa/K3d53OakC7Ch1YgqenxNj+dheSCkKosLLWPKqoA+v+sFH1iNT03s1PMK/8VWsfx/XalMGFNRluEDEpOAvpLPF55xmPQ2eTTOdRZ+F1gN3Z4=
   skip_cleanup: true
   on:
     branch: master
