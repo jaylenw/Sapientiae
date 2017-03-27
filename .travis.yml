@@ -28,7 +28,7 @@ deploy:
     tags: true
   provider: pages
   local_dir: _book
-  github_token: GITHUB_TOKEN
+  github_token: $GITHUB_TOKEN
   skip_cleanup: true
   on:
     branch: master
