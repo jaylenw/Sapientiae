@@ -8,6 +8,8 @@ A book containing various topics in computer science.
 
 This is a book that I made for myself and others to reference certain topics in computer science.
 
+You can download the latest release of the book as a pdf [here](https://github.com/jaylenw/Sapientiae/releases).
+
 # Features
 
 * Deploy this book as a website
