@@ -1,6 +1,9 @@
 language: node_js
 node_js:
 - 4.2.6
+env:
+  global:
+    - secure: jUReh+2FMkgqS41NzZMnGlsGTddGP/2H5ZMLmk+3z07FRAukWl/RDPyim91T8dLmkZyLUTgc7k55MadjUfmEOt0iFe+lL3v17gyEMrVVNwXSAksFGaaxGo3GqsEFeWKYq6uYnaxedK7PYROnBFHAmTv2E16e9o0rQgFgIf9F7p0bWYXFMmabFkgRZgHnAK99uOH0iOVxjShKhZ6r3EYSVJUfxwmM50fYfiHGhljK21W8IdqJXURRuUVq06Nm9jPubmDgJ/xhT8VBT+x4oVEJEsu4r0E+8y0UiVBP0jrzLY+2bsiY7Bw6gaIHbwczzmsRckSjQbnBBr7taog/SyIFKqWMV4xHPXjEVYsUmLSwRKoVU9US0S80UmYfunZmQGwKmUzMCwmdcq7Irfd2qWKOc0OsBATJzeHzYJ+Mh56UvXqgUyp5o4IsdvZb+vzSbDH51j+diqAjg+EVqCGTQC5ENq7xIrkNxCsbECknJmxMM55JFj4gx0OLdtHA/Zp6MZYaXO95BgO5gP831riuOIqKxfcCjyRK2wl4InfJ2H/6tKvjGA27RwUYkOb/vRH0THpi2NMnV5S+repA9EWo3Fa+SyxJq1YlZSxL9XaJmfrz/RcJewuMCvfu3TU+yzMT4+t4XB3y/0q8SuWyOCwZfYWll+WgbdGBvE6z4ptw975yfo4=
 before_script:
 - sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.py |
   sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read());
@@ -25,8 +28,7 @@ deploy:
     tags: true
   provider: pages
   local_dir: _book
-  github_token:
-    secure: lh+aonrzVdn9IuqZxhOq+DyGiKmO0PWAGv2/rWADKDnflrG4JKnmMVVKwbduFwInf0XdKKbxnFFio+o5bRgNbX3Nao+AM06N2gmOS1cv37nsKm4fv0gTTnyd+UoNEu+NmKifQ7YoR8WleGUOs/YAH2dU5X/w7w4zF/BnHxFgLOfJ1lvf6JPwmbhiBrZrxi4uy1+eFq050kQ44lvfR+hP0klv+hopcagGMxBOktVcGPfigCocnp/uoS0hOw4Ugu3nUAewJNdU9clA6oXnGN15RAcAhG+ftHjMon4cp5fnDveoP9CKc3rGP2UKNAoWcJHeCOwBGP98qissBZwY82NAXh6iSzNCPj5XFuQghYq1a+OooDc3mQjI7iTKy8x2ApZJXGXrp0FFo0sQGbfjELUAH135NaysAvKujd9T0b6ZQaxpXtaxVRTlmo6VuHVf4CoC6BTCz25pxlAiJMKt+BJNTN+L5v2C1epP9pPitRUpqT38lKkyE9QcsUUKAqnZ8NX5EQANefQNiZ2W0dz5LwhTyVlVaQPAbvZa4j8e4L7f4NX75dkK1NwPjB/uSR53kGa/K3d53OakC7Ch1YgqenxNj+dheSCkKosLLWPKqoA+v+sFH1iNT03s1PMK/8VWsfx/XalMGFNRluEDEpOAvpLPF55xmPQ2eTTOdRZ+F1gN3Z4=
+  github_token: GITHUB_TOKEN
   skip_cleanup: true
   on:
     branch: master
