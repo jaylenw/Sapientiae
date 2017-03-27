@@ -1,0 +1,37 @@
+{
+  "name": "sapientiae",
+  "version": "1.0.0",
+  "description": "A book containing certain topics in computer science.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gitbook-plugin-mathjax": "1.1.2",
+    "gitbook-plugin-multipart": "0.3.0",
+    "gitbook-plugin-scrollablecode": "0.1.0",
+    "remark-cli": "3.0.0",
+    "remark-lint": "6.0.0",
+    "remark-preset-lint-recommended": "2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "lint-md": "remark ."
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaylenw/Sapientiae.git"
+  },
+  "keywords": [
+    "gitbook",
+    "reference"
+  ],
+  "author": "jaylenw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaylenw/Sapientiae/issues"
+  },
+  "homepage": "https://github.com/jaylenw/Sapientiae#readme"
+}
