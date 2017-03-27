@@ -3,7 +3,6 @@ node_js:
   - "4.2.6"
 
 before_script:
-  - apt install npm
   - npm install gitbook-cli -g
   - npm install svgexport -g
   - gitbook install
