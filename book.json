@@ -1,0 +1,27 @@
+{
+    "gitbook": "3.2.2",
+    "title":   "Sapientiae",
+    "description": "'Volumen autem sunt et cyphris', Book of ones and zeros. A book containing various topics in computer science.",
+    "author":  "jaylenw & collaborators",
+    "root": "./bookPages",
+    "plugins": ["mathjax"],
+    "links": {
+        "sidebar": {
+            "Github": "https://github.com/jaylenw/Sapientiae"
+        }
+    },
+
+    "pdf": {
+        "pageNumbers": true,
+        "fontSize": 12,
+        "paperSize": "a4",
+        "margin": {
+            "right": 62,
+            "left": 62,
+            "top": 36,
+            "bottom": 36
+        },
+        "headerTemplate": null,
+        "footerTemplate": null
+    }
+}
