@@ -1,4 +1,4 @@
-# Sapientiae (wisdom)
+# Sapientiae (wisdom) [![Build Status](https://travis-ci.org/jaylenw/Sapientiae.svg?branch=master)](https://travis-ci.org/jaylenw/Sapientiae)
 
 *Volumen autem sunt et cyphris*, "Book of ones and zeros."  
 
