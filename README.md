@@ -32,7 +32,7 @@ You can download the latest release of the book as a pdf [here](https://github.c
 
 2. Clone this repository.
 
-3. In the root of the project run `gitbook install`
+3. In the root of the project run `gitbook install` then `npm install`
 
 4. Run `gitbook serve` and enter the address into your browser the console
 has printed. This allows you to preview the book in the web browser.
