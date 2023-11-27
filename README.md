@@ -4,6 +4,8 @@
 
 A book containing various topics in computer science.
 
+Archived 2023/11/26
+
 # Description
 
 This is a book that I made for myself and others to reference certain topics in computer science.
